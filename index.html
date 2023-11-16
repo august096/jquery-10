@@ -182,7 +182,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="contato">
         <div class="container">
             <h2>Entre em contato</h2>
             <form>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="form-campo">
                     <label for="veiculo-interesse">Veiculo de interesse:</label>
-                    <input type="text" name="veiculo-interesse" id="veiculo-interesse">
+                    <input type="text" name="veiculoDeInteresse" id="veiculo-interesse">
                 </div>
                 <div class="form-campo">
                     <label for="mensagem">mensagem:</label>
@@ -241,46 +241,6 @@
     <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/messages_pt_PT.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#carrocel-imagens').slick({
-                autoplay: true,
-            })
-
-            $('.menu-hamburguer').click(function() {
-                $('nav').slideToggle();
-            })
-
-            $('#telefone').mask('(00) 00000-0000')
-
-            $('form').validate({
-                rules: {
-                    nome: {
-                    required: true
-                },
-                email: {
-                    required: true,
-                    email: true
-                },
-                telefone: {
-                    required: true
-                }
-                }, 
-                messages: {
-                    nome: 'Por favor, insira seu nome '
-                },
-                submitHandler: function(form) {
-                    console.log(form)
-                },
-                invaliHandler: function(evento, validador) {
-                    let camposIncorretos = validador.numberOfInvalids();
-                    console.log(camposIncorretos)
-                    if (camposIncorretos) {
-                        alert(`Existem ${camposIncorretos} campos incorretos`)
-                    }
-                }
-            })
-        })
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
